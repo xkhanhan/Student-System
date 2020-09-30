@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生管理系统</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="shortcut icon" href="../image/logo.png">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 头部 -->
+        <div class="head">
+            <div>
+                <div class="logo">
+                    <img src="../image/logo.png" alt="">
+                    <span>学生管理</span>
+                </div>
+            </div>
+            <div>
+                <!-- 搜索 -->
+                <div class="search">
+                    <input type="text" id="search">
+                </div>
+                <div class="user">
+                    <!-- 图片 -->
+                    <div class="portrait"><img src="../image/user.png" alt=""></div>
+                    
+                    <i><img src="./image/more.jpg" alt="" srcset=""></i>
+                    <ul class="more">
+                        <li>修改密码</li>
+                        <li>修改头像</li>
+                        <li>退出登录</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 内容 -->
+        <div class="content">
+            <!-- 左边列表 -->
+            <div class="left">
+                <dl>
+                    <dt>学生管理</dt>
+                    <dd class="studen-checked active" id="li-checked">学生列表</dd>
+                    <dd class="studen-add" id="li-add">学生新增</dd>
+                </dl>
+            </div>
+            <!-- 右边内容 -->
+            <div class="right">
+                <!-- 学生列表 -->
+                <div class="index" id="conten-index">
+                    <div class="amendForm">
+                        <form action="" method="POST">
+                            <div>
+                                <label for="userName">姓名:</label><input name="name" type="text">
+                            </div>
+                            <div>
+                                <label for="sex">性别:</label>
+                                <label class="sex" for="">男</label><input  name="sex" value="男" checked='checked'
+                                    type="radio">
+                                <label class="sex" for="">女</label><input  name="sex" value="女" type="radio">
+                            </div>
+                            <div>
+                                <label for="id">学号:</label><input name="number" type="text">
+                            </div>
+                            <div>
+                                <label for="mail">邮箱:</label><input name="mail" type="text">
+                            </div>
+                            <div>
+                                <label for="year">年龄:</label><input  name="age" type="text">
+                            </div>
+                            <div>
+                                <label for="phone">手机号:</label><input  name="phone" type="text">
+                            </div>
+                            <div>
+                                <label for="address">住址:</label><input  name="address" type="text">
+                            </div>
+                            <div class="btns">
+                                <button class="amendFormbtnYes" type="submit">提交</button>
+                                <button class="amendFormbtnNo" type="reset">取消</button>
+                            </div>
+                        </form>
+                    </div>
+                    <table id="tableList">
+                        <tr>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>邮箱</th>
+                            <th>年龄</th>
+                            <th>手机号</th>
+                            <th>住址</th>
+                            <th>操作</th>
+                        </tr>
+                    <!-- <tr id="01">
+                            <td id="number">01</td>
+                            <td id="name">小王</td>
+                            <td id="sex">男</td>
+                            <td id="mail"> 1213442352@qq.com</td>
+                            <td id="age">18</td>
+                            <td id="phone">124334335</td>
+                            <td id="address">北京市</td>
+                            <td>
+                                <button id="delete" data-id="01">删除</button>
+                                <button id="amend" data-id="01" >修改</button>
+                            </td>
+                        </tr> -->
+                    </table>
+                    <div class="last-next-btn">
+                        <button class="last">上一页</button>
+                        <span><i class="indexActive">0</i>/<i class="every">0</i>页</span>
+                        <button class="next">下一页</button>
+                    </div>
+                </div>
+                <!-- 新增列表 -->
+                <div class="add" id="conten-add">
+                    <form action="">
+                        <div>
+                            <label for="addName">姓名:</label><input id="addName" placeholder="请输入姓名" value="" name="name" type="text">
+                        </div>
+                        <div>
+                            <label for="addSex">性别:</label>
+                            <label class="sex" for="">男</label><input id="addSex" value="男" name="sex" checked='checked'
+                                type="radio">
+                            <label class="sex" for="">女</label><input id="addSex" value='女' name="sex" type="radio">
+                        </div>
+                        <div>
+                            <label for="addId">学号:</label><input placeholder="请输入学号(不与列表学号重复)"  id="addId" name="number" type="text">
+                        </div>
+                        <div>
+                            <label for="addMail">邮箱:</label><input placeholder="请输入邮箱(数字开头.com结尾)" id="addMail" name="mail" type="text">
+                        </div>
+                        <div>
+                            <label for="addAge">年龄:</label><input placeholder="请输入年龄" id="addAge" name="age" type="text">
+                        </div>
+                        <div>
+                            <label for="addPhone">手机号:</label><input id="addPhone" placeholder="请输入手机号(6-11位)" name="phone" type="text">
+                        </div>
+                        <div>
+                            <label for="addAddress">住址:</label><input placeholder="请输入地址(不超过15字)"id="addAddress" name="address" type="text">
+                        </div>
+                        <div class="btns">
+                            <button id="addBtn" type="submit">提交</button>
+                            <button type="reset">重置</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./jQuery.js"></script>
+    <script src="./index.js"></script>
+ 
+    <script>
+        student();
+    </script>
+</body>
+
+</html>
