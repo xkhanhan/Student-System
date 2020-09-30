@@ -1,0 +1,386 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+a{
+    color: #000000;
+}
+html, body, .wrap,
+.wrap>.content>.right>.add,
+.amendForm,
+.index{
+    width: 100%;
+
+    height: 100%;
+}
+.wrap{
+    min-height: 570px;
+    min-width: 900px;
+    margin: 0 auto;
+}
+/* 头部 */
+.wrap>.head{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: #354457;
+    justify-content: space-between;
+}
+.wrap>.head .logo{
+    font-size: 14px;
+    line-height: 70px;
+    width: 100px;
+    height: 70px;
+    margin-left: 20px;
+    color: #b3bcc5;
+    
+}
+.wrap>.head .logo>img{
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 30px;
+    margin-right: 5px;
+}
+
+
+.wrap>.head .search,
+.wrap>.head .user,
+.wrap>.head .user>.portrait{
+    line-height: 70px;
+    display: inline-block;
+    height: 70px;
+    vertical-align: middle;
+}
+.wrap>.head>div:nth-child(2)>div{
+    margin-right: 20px;
+}
+.wrap>.head .search{
+    width: 210px;
+   
+}
+.wrap>.head .user{
+    width: 100px;
+    cursor: pointer;
+    position: relative;
+}
+.wrap>.head .search>input{
+    border: 1px solid #cccccc;
+    outline: none;
+    height: 30px;
+    width: 180px;
+    padding-left: 20px;
+    border-radius: 20px;
+}
+
+.wrap>.head .user>i,
+.wrap>.head .user>i>img{
+    height: 25px;
+    width: 25px;
+}
+.wrap>.head .user>i{
+    font-style: normal;
+    vertical-align: middle;
+    
+}
+.wrap>.head .user>.portrait{
+    text-align: center;
+    background-color: #cccccc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.wrap>.head .user>.portrait>img{
+    width: 50px;
+    height: 50px;
+}
+.wrap>.head .user>.more{
+    position: absolute;
+    width: 100px;
+    top: 70px;
+    left: 0px;
+    height: 0px;
+    transition: all 0.2s;
+
+}
+.wrap>.head .user>.more>li{
+    height: 0px;
+    font-size: 0;
+    line-height: 50px;
+    text-align: center;
+    transition: all 0.2s;
+    opacity: 0;
+    position: relative;
+    background: #4d5e70;
+
+}
+.wrap>.head .user>.more>li:hover{
+    background-color: #cccccc;
+    color: #000000;
+    font-weight: bold;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.wrap>.head .user:hover>.more{
+    height: 150px;
+}
+.wrap>.head .user:hover>.more>li{
+    height: 50px;
+    font-size: 14px;
+    opacity: 1;
+}
+/* 内容 */
+.wrap>.content{
+    min-height: 500px;
+    width: 100%;
+    height: calc(100%  -  70px);
+}
+.wrap>.content>.left{
+    height: 100%;
+    width: 200px;
+    float: left;
+    background: #4d5e70;
+}
+.wrap>.content>.left>dl,
+.wrap>.content>.left>dl>dt,
+.wrap>.content>.left>dl>dd{
+    font-size: 14px;
+    color: #b3bcc5;
+    width: 100%;
+    box-sizing: border-box;
+}
+.wrap>.content>.left>dl>dt{
+    line-height: 40px;
+    height: 40px;
+    padding-left: 10px;
+}
+.wrap>.content>.left>dl>dd{
+    cursor: pointer;
+    line-height: 40px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.active{
+    background-color: #ddd !important;
+    color: #000000 !important;
+}
+
+.wrap>.content>.left>dl>dd:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #354457;
+}
+
+.wrap>.content>.right::after,
+.wrap>.content>.left::after{
+    content:'';
+    clear: both;
+}
+
+.wrap>.content>.right{
+    float: right;
+    width: calc(100% - 200px);
+    height: 100%;
+}
+.wrap>.content>.right .add{
+    display: none;
+}
+
+.wrap>.content>.right>.index,
+.wrap>.content>.right>.index>table{
+    table-layout:fixed;
+    text-align: center;
+    width: 100%;
+}
+.wrap>.content>.right>.index>table tr{
+    height: 30px;
+    background-color: #cccccc;
+}
+.wrap>.content>.right>.index>table tr>td{
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.wrap>.content>.right>.index>table tr:nth-child(1) {
+    background-color: #e3e8ee;
+}
+.wrap>.content>.right>.index>table tr td button{
+    outline: none;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.wrap>.content>.right>.index>table tr td button:nth-child(1){
+    background-color: #5cb85c;
+}
+.wrap>.content>.right>.index>table tr td button:nth-child(2){
+    background-color: #d9534f;
+}
+.wrap>.content>.right>.index>.last-next-btn {
+    width: 100%;
+    height: 25px;
+    background: #cccccc;
+}
+.wrap>.content>.right>.index>.last-next-btn >button{
+    vertical-align: middle;
+}
+.wrap>.content>.right>.index>.last-next-btn i{
+    font-style: normal;
+    display: inline-block;
+    width: 40px;
+    height: 21px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    margin-top: 2px;
+    vertical-align: top;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 2px 2px;
+} 
+.wrap>.content>.right>.index>.last-next-btn input{
+    width: 40px;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.indexActive{
+    color: red;
+}
+
+
+form{
+    text-align: center;
+    width: 520px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 40px;    
+}
+form>div{
+    margin: 30px 0;
+    width: 100%;
+    height: 21px;
+
+}
+form div input{
+    background-color: #fff;
+    outline: none;
+}
+form div label{
+    margin-right: 10px;
+    text-align: right;
+    display: inline-block;
+    width: 70px;
+}
+form .sex{
+    width: 40px;
+}
+
+form .btns button{
+    padding: 0 20px;
+}
+
+.amendForm{
+    min-height: 570px;
+    min-width: 900px;
+    display: none;
+    background-color: rgba(68, 66, 66, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.amendForm>form{
+    padding: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -150px;
+    margin-left: -210px;
+}
+
+.wrap>.ver{
+    z-index: 999;
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+    color: red;
+    position: absolute;
+    left: calc(50% - 150px);
+    top: -100px;
+    width: 300px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px #cccccc;
+}
+
+.wrap>.studentData,
+.wrap>.updatePass{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    min-width: 900px;
+    min-height: 570px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.wrap>.studentData>.wrapper,
+.wrap>.updatePass>.wrapper{
+    position: absolute;
+    left: calc(50% - 175px);
+    top: calc(50% - 200px);
+    width: 400px;
+    height: 450px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+ box-sizing: border-box;
+}
+.wrap>.studentData>.wrapper>div,
+.wrap>.updatePass>.wrapper>div{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    line-height: 50px;
+}
+.wrap>.updatePass>.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+}
+.wrap>.updatePass>.wrapper>div{
+    text-align: center;
+    padding-left: 0px;
+}
+.wrap>.updatePass>.wrapper>div>button {
+    margin: 0 20px;
+}
+#delete{
+    outline: none;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #d9534f;
+}
+#amend{
+    outline: none;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #5cb85c;
+}

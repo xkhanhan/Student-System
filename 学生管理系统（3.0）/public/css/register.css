@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,body,.wrap{
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0px;
+}
+
+.wrap{
+    user-select: none;
+    min-width: 500px;
+    min-height: 500px;
+    background: url(/image/register_banner.jpg) no-repeat;
+    background-size: cover;
+}
+.form,.top,.user,.bottom{
+    display: flex;
+}
+
+.sing{
+    display: none;
+}
+.sing > .top {
+    height: 40px !important;
+}
+.form{
+    position: absolute;
+    background-color: rgba(0,0,0, .5);
+    width: 400px;
+    height: 500px;
+    top: calc(50% - 250px);
+    left: calc(50% - 200px);
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.form>.top{
+    flex-direction: column;
+    width: 100%;
+    height: 80px;
+}
+.form>.top>.logo{
+    text-align: center;
+    display: inline-block;
+    height: 40px;
+}
+.form>.top>.logo>img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.form>.top>.logo>.title{
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    color: #ffffff;
+    font-weight: bold;
+}
+.form>.top>.user{
+    width: 100%;
+    height: 40px;
+    justify-content: space-around;
+    font-weight: bold;
+}
+.sing>.bottom{
+    height: calc(100% - 40px - 50px) !important;
+}
+.form>.bottom{
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 80px - 50px);
+    justify-content: space-around;
+}
+.form>.bottom>div{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+.form>.bottom>div>input{
+    box-sizing: border-box;
+    padding-left: 20px;
+    height: 40px;
+    width: 60%;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.form>.bottom>div:nth-child(3){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form>.bottom>div:nth-last-child(2)>input{
+    width: 40%;
+}
+.sing>.bottom>div:nth-last-child(2)>input{
+    width: 60%;
+}
+.form>.bottom>div>.verificationCode{
+    line-height: 40px;
+    width: 60px;
+    height: 40px;
+    margin: 10px;
+    background-color: rgb(122, 116, 116);
+}
+.form>.bottom>div:nth-last-child(1)>button{
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin: 0 40px;
+    cursor: pointer;
+}
+input[type="radio"]{
+    cursor: pointer;
+}
+.about{
+    text-align: center;
+    height: 40px;
+}
+.about>.content{
+    width: 90%;
+    margin: 0 auto;
+    border-top: 1px solid #ffffff;
+}
+.promptBox{
+  width: 100%;
+  height: 100%;
+  position: relative;  
+  display: none;
+  background-color: rgba(0,0,0, .5);
+}
+.promptBox>.content{
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 5px;
+    left: calc(50% - 100px);
+    top: calc(50% - 40px);
+    text-align: center;
+    line-height: 80px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    vertical-align: middle;
+}
